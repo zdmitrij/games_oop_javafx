@@ -1,15 +1,11 @@
 package ru.job4j.puzzle;
 
 public class Win {
-    //public static boolean check(int[][] board) {
-      //  boolean rsl = true;
-      //  return rsl;
-
-
-    public static boolean check(int[][] board) {
+        public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int index = 0; index < board.length; index++) {
-            if (board[index][index] == 1 && (monoHorizontal(board, index) || monoVertical(board, index))) {
+            if (board[index][index] == 1 && (monoHorizontal(board, index)
+                    || monoVertical(board, index))) {
                 rsl = true;
                 break;
             }
@@ -38,6 +34,4 @@ public class Win {
         }
         return result;
     }
-
-
 }
